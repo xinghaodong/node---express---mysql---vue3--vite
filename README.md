@@ -43,7 +43,7 @@ npm run build
 -   vue-router4
 -   element-plus
 -   pinia
--   axios 请求、响应拦截,封装,双 token 策略
+-   axios 请求、响应拦截,封装,双 token 策略，无感刷新token
 -   vite 配置 生产、测试、开发
 -   分离的路由和菜单设置
 -   可折叠侧边栏

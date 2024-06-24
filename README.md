@@ -37,6 +37,8 @@ npm run build
 -   tree 形菜单的增删改
 -   用户增删改
 -   登录
+-   websocket 踢出用户登录
+-   附件上传
 -   前端 vite5 + vue3 + js 快速开发
 -   vue-router4
 -   element-plus
@@ -49,3 +51,10 @@ npm run build
 -   模块化全局状态管理
 -   数据持久化：实现用户登录、路由菜单
 -   切换全局基础组件尺寸
+
+<!-- 如何写readme 加图片-->
+<img src="https://img.shields.io/badge/vue-3.4.21-green" />
+<img src="https://img.shields.io/badge/vite-5.2.0-green" />
+<img src="https://img.shields.io/badge/element-plus-2.7.4-green" />
+<img src="https://img.shields.io/badge/pinia-3.2.1-green" />
+<img src="https://img.shields.io/badge/tailwindcss-3.4.4-green" />

@@ -1,0 +1,23 @@
+GET http://127.0.0.1:3000/api/user?id=18 HTTP/1.1 
+###
+
+POST http://localhost:3000/api/add HTTP/1.1
+content-type: application/json
+
+{
+    "name": "邢浩东",
+    "age": "19"
+}
+###
+GET http://localhost:3000/api/menus HTTP/1.1
+###
+POST http://localhost:3000/api/addmenu HTTP/1.1
+content-type: application/json
+
+{
+    "name": "哈哈",
+    "parent_id": ""
+}
+
+###
+GET http://localhost:3000/api/internalusers/find HTTP/1.1

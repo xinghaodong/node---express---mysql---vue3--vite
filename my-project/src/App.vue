@@ -17,9 +17,11 @@ body,
 #app {
     display: flex;
     flex-direction: column;
-    
 }
 .mb-4 {
     margin-bottom: 16px;
 }
+/*#nprogress .bar {
+    background-color: red !important;
+}*/
 </style>

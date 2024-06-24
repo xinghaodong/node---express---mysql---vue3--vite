@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 import home from '@/home.vue';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+NProgress.configure({
+    easing: 'ease', // 动画方式
+    speed: 500, // 递增进度条的速度
+    showSpinner: true, // 是否显示加载 icon
+    trickleSpeed: 200, // 自动递增间隔
+    minimum: 0.3, // 初始化时的最小百分比
+});
 const router = createRouter({
     history: createWebHashHistory(),
     // #好哈希路由模式
@@ -85,6 +94,15 @@ const router = createRouter({
             component: () => import('@/pages/login.vue'),
         },
     ],
+});
+
+router.beforeEach((to, from, next) => {
+    NProgress.start(); // 进度条开始
+    next();
+});
+
+router.afterEach(() => {
+    NProgress.done(); // 进度条结束
 });
 
 export default router;

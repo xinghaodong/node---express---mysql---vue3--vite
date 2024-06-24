@@ -12,7 +12,8 @@ import 'uno.css';
 const app = createApp(App);
 app.config.globalProperties.$api = axios;
 app.config.globalProperties.$websocket = websocket;
-app.use(axios).use(router).use(pinia).use(ElementPlus, { size: 'small', zIndex: 3000 });
+// size: 'small',
+app.use(axios).use(router).use(pinia).use(ElementPlus, { zIndex: 3000 });
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component);
 }

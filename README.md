@@ -34,6 +34,9 @@ npm run build
 
 -   后端 express mysql2
 -   中间件 jwt 权限
+-   tree 形菜单的增删改
+-   用户增删改
+-   登录
 -   前端 vite5 + vue3 + js 快速开发
 -   vue-router4
 -   element-plus

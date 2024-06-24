@@ -55,6 +55,6 @@ npm run build
 <!-- 如何写readme 加图片-->
 <img src="https://img.shields.io/badge/vue-3.4.21-green" />
 <img src="https://img.shields.io/badge/vite-5.2.0-green" />
-<img src="https://img.shields.io/badge/element-plus-2.7.4-green" />
+<img src="https://img.shields.io/badge/element-plus-green" />
 <img src="https://img.shields.io/badge/pinia-3.2.1-green" />
 <img src="https://img.shields.io/badge/tailwindcss-3.4.4-green" />

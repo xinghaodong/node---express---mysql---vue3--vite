@@ -6,6 +6,7 @@ const poolConfig = {
     user: 'root', // 数据库用户名
     password: '123456', // 数据库密码
     database: 'mydatabase', // 数据库名
+    port: '3307', // 如果你的MySQL服务不是运行在默认端口，可以在这里指定
     // waitForConnections: true,
     // connectionLimit: 10, // 根据需要调整
     // queueLimit: 0,

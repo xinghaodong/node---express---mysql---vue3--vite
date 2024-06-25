@@ -99,7 +99,7 @@ const onSubmit = formEl => {
         }
         if (form.id) {
             // 更新菜单
-            proxy.$api.post('/api/updatemenu', form).then(res => {
+            proxy.$api.updatemenu(form).then(res => {
                 if (res.code == 200) {
                     proxy.$message.success(res.message);
                     dialogVisible.value = false;
@@ -111,7 +111,7 @@ const onSubmit = formEl => {
             if (form.parent_id == 0) {
                 form.parent_id = '';
             }
-            const data = await proxy.$api.post('/api/addmenu', form);
+            const data = await proxy.$api.addmenu(form);
             if (data.code == 200) {
                 dialogVisible.value = false;
                 proxy.$message.success(data.message);
@@ -122,7 +122,7 @@ const onSubmit = formEl => {
 };
 // 删除菜单
 const handleDelete = async row => {
-    const data = await proxy.$api.post('/api/deletemenu', { id: row });
+    const data = await proxy.$api.deletemenu({ id: row });
     if (data.code == 200) {
         proxy.$message.success(data.message);
         getTreeData();

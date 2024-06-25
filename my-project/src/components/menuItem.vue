@@ -1,20 +1,3 @@
-<script setup>
-import { computed } from 'vue';
-const props = defineProps({
-    item: {
-        type: Object,
-        required: true,
-    },
-    isCollapse: {
-        type: Boolean,
-        default: false,
-    },
-});
-const hasChildren = computed(() => Array.isArray(props.item.children) && props.item.children.length > 0);
-const Document = 'Document';
-const Folder = 'Folder';
-</script>
-
 <template>
     <el-sub-menu v-if="hasChildren" :index="props.item.id.toString()">
         <template #title>
@@ -36,3 +19,19 @@ const Folder = 'Folder';
         </el-menu-item>
     </template>
 </template>
+<script setup>
+import { computed } from 'vue';
+const props = defineProps({
+    item: {
+        type: Object,
+        required: true,
+    },
+    isCollapse: {
+        type: Boolean,
+        default: false,
+    },
+});
+const hasChildren = computed(() => Array.isArray(props.item.children) && props.item.children.length > 0);
+const Document = 'Document';
+const Folder = 'Folder';
+</script>

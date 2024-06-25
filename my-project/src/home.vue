@@ -19,6 +19,13 @@
                             </template>
                         </el-breadcrumb>
                     </div>
+                    <div class="relative ml-3">
+                        <div>
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">Open user menu</span>
+                            <img class="h-9 w-9 rounded-full" :src="`${proxy.$api.img_url}${userInfo.avatar_url}`" alt="" />
+                        </div>
+                    </div>
                 </div>
                 <!-- tab-click 事件名字 -->
                 <el-tabs
@@ -58,6 +65,7 @@
 import MenuItem from './components/menuItem.vue';
 import { ref, getCurrentInstance, onMounted, onBeforeUnmount, nextTick, watch } from 'vue';
 import menuStore from '@/stortes/menu'; //引入仓库
+import useUserInfoStore from '@/stortes/user'; //引入仓库
 import { storeToRefs } from 'pinia'; //引入pinia转换
 import { useRouter, useRoute } from 'vue-router';
 import { ElNotification, ElTabs, ElTabPane } from 'element-plus';
@@ -65,7 +73,9 @@ let route = useRoute();
 const router = useRouter();
 const { proxy } = getCurrentInstance();
 const menuInfoStore = menuStore();
+const userStore = useUserInfoStore();
 const { activeTabArray, editableTabsValue } = storeToRefs(menuInfoStore); // 响应式
+const { userInfo } = storeToRefs(userStore);
 const userData = ref(null);
 const breadList = ref([]);
 // 一定一个当前右键点击的 菜单对象不是函数
@@ -171,6 +181,7 @@ const removeTab = pane => {
     proxy.$router.push(editableTabsValue.value);
 };
 const handleClick = (pane, ev) => {
+    console.log(userInfo.value, '5555');
     // 路由跳转
     proxy.$router.push(pane.paneName);
 };

@@ -165,6 +165,10 @@ export default {
     menus(params) {
         return oGet(baseUrl + '/menus', params);
     },
+    // 修改菜单
+    updatemenu(params) {
+        return oPost(baseUrl + '/updatemenu', params);
+    },
     //用户管理查询
     find(params) {
         return oGet(baseUrl + '/internalusers/find', params);
